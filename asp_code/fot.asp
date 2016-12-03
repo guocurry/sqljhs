@@ -1,0 +1,1 @@
+<div class="fot_nav box"><a href="/">首页</a><a href="/news.asp">信息发布</a><a href="/statistics.asp">数据统计</a><a href="#">辅助决策</a><a href="#">在线监管</a><a href="#">垃圾地图</a></div><div class="fot"><div class="fot_box box"><%=webcopy%></div></div>
