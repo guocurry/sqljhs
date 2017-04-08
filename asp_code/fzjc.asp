@@ -7,6 +7,7 @@
 <link href="style/home.css" rel="stylesheet" type="text/css" />
 <script src="script/jquery.js"></script><script src="layer/layer.js"></script><script src="script/lycm.min.js"></script><script src="city.js"></script>><script src="math.js"></script>
 <style>
+.radio{font-size:14px; margin-right:15px;font-family:"Microsoft YaHei UI";}
 .b1tt{ font-size:14px; font-weight:bold;}
 .b1tt span,.b1t{ color:#F00;}
 .tbsm{padding: 8px;background-color: #FFF8F0;border-radius: 4px;color: #4D2E00; border: 1px solid #FFF1E3; margin-bottom:15px;}
@@ -400,42 +401,45 @@ set rs=nothing%></div>
     </table></div>
 </div>
 <input type="hidden" id="jisuan_" value="0" />
-<div id="juce2">
+  <div id="juce2">
     <div class="next_wrap" id="yiyuan_1">
-    	<span>是否计划实施垃圾分类收集？</span>
-        <a href="javascript:;" onclick="go_(2);setSchema(0,1)">是</a><a href="javascript:;" onclick="show_(1);setSchema(0,0)">否</a>
-    </div>
-    <div class="next_wrap" id="yiyuan_2">
-    	<span>请选择计划实施的垃圾分类收集方式</span>
-        <a href="javascript:;" onclick="show_(2);setSchema(1,1)">可回收垃圾、其它垃圾</a><a href="javascript:;" onclick="go_(3);setSchema(1,0)">可回收垃圾、厨余垃圾、其它垃圾</a>
-    </div>
-     <div class="next_wrap" id="yiyuan_3">
-    	<span>是否有垃圾处理房？</span>
-        <a href="javascript:;" onclick="go_(9);jisuan_(1);setSchema(2,1)">是</a><a href="javascript:;" onclick="go_(4);setSchema(2,0)">否</a>
-    </div>
-     <div class="next_wrap" id="yiyuan_4">
-    	<span>是否可新建垃圾处理房？</span>
-        <a href="javascript:;" onclick="go_(9);jisuan_(1);setSchema(3,1)">是</a><a href="javascript:;" onclick="go_(5);setSchema(3.0)">否</a>
-    </div>
-    <div class="next_wrap" id="yiyuan_5">
-    	<span>是否有可用于垃圾处理的闲置用地？</span>
-        <a href="javascript:;" onclick="go_(9);jisuan_(2);setSchema(4,1)">是</a><a href="javascript:;" onclick="go_(6);setSchema(4,0)">否</a>
-    </div>
-    <div class="next_wrap" id="yiyuan_6">
-    	<span>社区用户是否愿意接受下水改造？</span>
-        <a href="javascript:;" onclick="go_(9);jisuan_(3);setSchema(5,1)">是</a><a href="javascript:;" onclick="go_(7);setSchema(5,0)">否</a>
-    </div>
-    <div class="next_wrap" id="yiyuan_7">
-    	<span>环卫部门是否负责收集厨余垃圾？</span>
-        <a href="javascript:;" onclick="show_(3);jisuan_(4);setSchema(6,1)">是</a><a href="javascript:;" onclick="show_(2);setSchema(6,0)">否</a>
-    </div>
-    <div class="next_wrap" id="yiyuan_9">
-    	<span>是否有有购买和运行设备的资金？</span>
-        <a href="javascript:;" onclick="go_(10);setSchema(7,1)">是</a><a href="javascript:;" onclick="go_(5);setSchema(7,0)">否</a>
-    </div>
-    <div class="next_wrap" id="yiyuan_10">
-    	<span>是否有足够的安全防护距离？</span>
-        <a href="javascript:;" onclick="show_(3);setSchema(8,1)">是</a><a href="javascript:;" onclick="go_(5);setSchema(8,0)">否</a>
+    	<span>是否计划实施垃圾分类收集？</span><br>
+        <input type="radio" name="plan" class = "radio" value="Yes">是 
+        <input type="radio" name="plan" class = "radio" value="No" checked="checked">否<br>
+
+    	<span>请选择计划实施的垃圾分类收集方式</span><br>
+	    <input type="radio" name="away" class = "radio" value="Yes">可回收垃圾   
+        <input type="radio" name="away" class = "radio" value="No" checked="checked">厨余垃圾、其它垃圾<br>
+
+       <span>是否有垃圾处理房？</span><br>
+       <input type="radio" name="garbage-garbage" class = "radio" value="Yes">是 
+       <input type="radio" name="garbage-garbage" class = "radio" value="No" checked="checked">否<br>
+
+       <span>是否可新建垃圾处理房？</span><br>
+       <input type="radio" name="new-garbage-garbage" class = "radio" value="Yes">是 
+       <input type="radio" name="new-garbage-garbage" class = "radio" value="No" checked="checked">否<br>
+ 
+    	<span>是否有可用于垃圾处理的闲置用地？</span><br>
+        <input type="radio" name="open-space" class = "radio" value="Yes">是 
+        <input type="radio" name="open-space" class = "radio" value="No" checked="checked">否<br>
+  
+    	<span>社区用户是否愿意接受下水改造？</span><br>
+        <input type="radio" name="under-ground-piping" class = "radio" value="Yes">是 
+        <input type="radio" name="under-ground-piping" class = "radio" value="No" checked="checked">否<br>
+   
+    	<span>环卫部门是否负责收集厨余垃圾？</span><br>
+	    <input type="radio" name="sanitation" class = "radio" value="Yes">是 
+        <input type="radio" name="sanitation" class = "radio" value="No" checked="checked">否<br>
+  
+    	<span>是否有有购买和运行设备的资金？</span><br>
+	    <input type="radio" name="funds" class = "radio" value="Yes">是 
+        <input type="radio" name="funds" class = "radio" value="No" checked="checked">否<br>
+
+    	<span>是否有足够的安全防护距离？</span><br>
+	    <input type="radio" name="safe-distance" class = "radio" value="Yes">是 
+        <input type="radio" name="safe-distance" class = "radio" value="No" checked="checked">否<br>
+        
+        <input type="button" value="下一步" id="finish_btn" class="nextbtn" />
     </div>
 </div>
 </form>

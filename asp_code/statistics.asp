@@ -40,10 +40,10 @@ set rs=nothing%>
       </ul>
     </div>
     <div class="news_info right">
-<!--    	<div id="container" style="height: 500px; min-width: 310px; max-width: 800px; margin: 0 auto"></div>-->
+    	<div id="container" style="height: 500px; min-width: 310px; max-width: 800px; margin: 0 auto"></div>
     	<br>
     	<br>
-        <div class="tj_search" id="tj_search_box">Load Statistics Btn</div>
+        <div class="tj_search" id="tj_search_box" style="display:none;">Load Statistics Btn</div>
         <div class="cer"></div>
         <div class="zhuti_more" style="display:none;">
           
@@ -58,7 +58,7 @@ rs.close
 set rs=nothing%>
       </div>
         <div class="tj_sbox" id="tj_sbox" style="min-height:440px;">
-        <div style="text-align:center; color:#999;"><img src="images/loading.gif" width="40" /><p>统计数据加载中</p></div></div>
+        <div style="text-align:center; color:#999; display:none;"><img src="images/loading.gif" width="40" /><p>统计数据加载中</p></div></div>
     </div>
     <div class="cer"></div>
 </div>
@@ -87,7 +87,6 @@ $(function(){
     function(data,status){
      if(status=="success"){
 		$("#tj_sbox").html(data);
-//         document.getElementById("container").style.visibility="hidden";
 		 }else{layer.msg("统计失败，请稍后重试！");}
     });
 	})window.onload=function(){
@@ -101,7 +100,6 @@ $(function(){
 
 <script>
 $(function () {
-
     Highcharts.setOptions({
         lang:{
             drillUpText:"返回 > {series.name}"

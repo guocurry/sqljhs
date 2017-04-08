@@ -22,6 +22,9 @@ $(document).ready(function(){
   $(".click").click(function(){
    window.location.href='pro_reg.asp'
   });
+  $(".file").click(function(){
+   window.location.href='pro_file_add.asp'
+  });
   
   $(".tiptop a").click(function(){
   $(".tip").fadeOut(200);
@@ -49,19 +52,12 @@ $(document).ready(function(){
     </div>
     
     <div class="rightinfo">
-    
     <div class="tools">
-    
     	<ul class="toolbar">
        <li class="click"><span><img src="images/t01.png" /></span>添加</li>
-
+        <li class="file"><span><img src="images/t01.png" /></span>批量</li>
         <li id="delshow"><span><img src="images/t03.png" /></span>删除</li>
-        
         </ul>
-        
-        
-       
-    
     </div>
      <form id="delsuju" name="form1" method="post" action="?del=ok">
     

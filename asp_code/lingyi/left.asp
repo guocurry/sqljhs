@@ -109,7 +109,7 @@ function disp(n,txt){
     <div id="leftnav_4" style="display:none;" class="leftnav">
     	 <dd><div class="title"><span><img src="images/leftico01.png" /></span>产品管理</div>
     <ul class="menuson">
-        <li><cite></cite><a href="pro.asp" target="rightFrame">数据管理</a><i></i></li>
+        <li><cite></cite><a href="pro.asp" target="rightFrame">设施信息</a><i></i></li>
         <li><cite></cite><a href="fzjc.asp" target="rightFrame">辅助决策</a><i></i></li>
         
     </ul>

@@ -12,15 +12,20 @@ conn.open ConnStr
 <style>body{ font-family:"Microsoft YaHei UI"}
 .checkbox{ width:110px; float:left; margin-top:10px;}
 .checkbtn a{ display:block; height:30px; text-align:center; line-height:30px; background-color:#06F; color:#FFF; text-decoration:none; margin-top:20px;}</style>
-<script src="../script/jquery.js"></script><script src="../layer/layer.js"></script>
+<script src="../script/jquery.js"></script>
+<script src="../layer/layer.js"></script>
+<script src="../sel_js/bootstrap.min.js"></script>
+<script src="../sel_css/bootstrap/bootstrap.min.css"></script>
 </head>
 
 <body>
-<div class="tj_class_box" style="text-align:right; margin-bottom:5px;">统计图样式：
-  <input name="tongjiclass" type="radio" id="zztj" value="1"  checked="checked" onclick="class_(1)" />
-  <label for="zztj">柱状统计图</label>
-   <input type="radio" name="tongjiclass" id="xztj" value="2" onclick="class_(2)" />
-  <label for="xztj">线状统计图</label>
+<div class="row">
+    <div class="tj_class_box col-sm-2" style=" margin-bottom:5px;">统计图样式：
+      <input class="col-sm-1" name="tongjiclass" type="radio" id="zztj" value="1"  checked="checked" onclick="class_(1)" />
+      <label class="col-sm-4" for="zztj">柱状统计图</label>
+       <input class="col-sm-1" type="radio" name="tongjiclass" id="xztj" value="2" onclick="class_(2)" />
+      <label class="col-sm-4" for="xztj">线状统计图</label>
+    </div>
 </div>
 <table width="100%" border="0">
   <tr>
@@ -77,7 +82,11 @@ function tongji(){
 		$.post("/box/tongji_mains.asp",{zhuti:text,shuxing:$("#shuxing").val(),kaishi:$("#kaishi").val(),jieshu:$("#jieshu").val(),tjclass:$("input[name=tongjiclass]:checked").val()},
    function(data,status){
      if(status=="success"){
+         parent.$("#zhuti_more").show();
 		 parent.$("#tj_sbox").html(data);
+//         parent.$("#tj_sbox").html(data);
+         parent.$("#container").hide();
+         
 		 parent.layer.close(index);
 		 }else{$("#tj_sbox").html("加载失败，请稍后重试");}
    });
